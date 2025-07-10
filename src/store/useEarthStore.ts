@@ -1,5 +1,7 @@
 import {defineStore} from "pinia";
 const toDegreesMinutesAndSeconds = (coordinate: number): string => {
+    //输入：一个十进制度数格式的经纬度（number）
+    //输出：对应的度分秒格式字符串，如 120° 30' 15"
     const absolute = Math.abs(coordinate);
     const degrees = Math.floor(absolute);
     const minutesNotTruncated = (absolute - degrees) * 60;
